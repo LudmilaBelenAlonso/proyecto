@@ -34,8 +34,17 @@
         <dt>Localidad</dt>
         <dd>{{$noticia -> localidad -> nombre}}</dd>
 
-
-
     </dl>
+    <div class="mb-3">
+        <legend>Tickets disponibles</legend>
+        @foreach($noticia->tickets as $ticket)
+            <span class="badge">{{$ticket->nombre}}</span>
+            <button>{{$ticket->nombre}}</button>
+        @endforeach
+    </div>
+
+
+
+
 
 @endsection

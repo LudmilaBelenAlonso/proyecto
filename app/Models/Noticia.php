@@ -41,6 +41,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read int|null $generos_count
  * @property string|null $poster
  * @method static \Illuminate\Database\Eloquent\Builder|Noticia wherePoster($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Genero[] $tickets
+ * @property-read int|null $tickets_count
  */
 class Noticia extends Model
 {
@@ -77,7 +79,7 @@ class Noticia extends Model
     public function tickets()
     {
         return $this->belongsToMany(
-            Genero::class,
+            Ticket::class,
             'noticias_tienen_tickets',
             'noticia_id',
             'ticket_id',

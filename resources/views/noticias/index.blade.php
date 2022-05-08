@@ -44,6 +44,7 @@
             <td>{{$noticia -> fecha_evento}}</td>
             <td>{{$noticia -> localidad->nombre}}</td>
             <td>{{$noticia -> localidad->pais}}</td>
+
             <td>
                 <div class="d-flex">
                     <a href="{{ route('noticias.ver', ['id' => $noticia->noticia_id]) }}" class="btn btn-primary mx-1">Ver</a>

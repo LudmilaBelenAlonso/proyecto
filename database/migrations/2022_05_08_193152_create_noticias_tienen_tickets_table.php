@@ -18,8 +18,6 @@ return new class extends Migration
             $table->unsignedSmallInteger('ticket_id');
             $table->foreign('ticket_id')->references('ticket_id')->on('tickets');
             $table->primary(['noticia_id','ticket_id']);
-            $table->date('fecha');
-            $table->integer('precio');
             $table->timestamps();
         });
     }

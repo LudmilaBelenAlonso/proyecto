@@ -20,8 +20,9 @@ class NoticiasSeeder extends Seeder
                 'noticia_id' =>1,
                 'localidad_id' =>3,
                 'titulo' => 'Rock in Rio 2022',
-                'copete' => 'Vuelve el Rock in Rio a Brasil. Se llevará a cabo la primer semana de Septiembre.',
-                'desarrollo' => 'Vuelve el Rock in Rio a Brasil. Se llevará a cabo la primer semana de Septiembre.',
+                'copete' => 'La octava edición del Rock in Río en Río de Janeiro estaba prevista inicialmente para septiembre y octubre de 2021, pero la pandemia de la covid-19, que ha castigado duramente a Brasil, obligó a los organizadores a aplazarla un año.',
+                'desarrollo' => 'Rock in Rio abre sus puertas para recibir durante dos fines de semana a artistas de todo el mundo. La organización confirmó las cabezas de cartel del festival quienes se estarán presentando los 2, 3, 4, 8, 9, 10 y 11 de septiembre.
+En el escenario Mundo do Festival se presentarán Iron Maiden, Post Malone, Justin Bieber, Guns n’ Roses, Green Day, The Offspring, Coldplay y Dua Lipa. Por su parte en el escenario Sunset están confirmados: Bullet For My Valentine, Living Color, Racionais, Corinne Bailey Rae, Joss Stone, Avril Lavigne, CeeLo Green, Macy Grey, entre otros.',
                 'fecha_evento' => '09-2022',
                 'poster' => '',
                 'created_at' => now(),

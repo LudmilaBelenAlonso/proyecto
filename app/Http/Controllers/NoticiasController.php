@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\Genero;
 use App\Models\Localidad;
 use App\Models\Noticia;
+use App\Models\Ticket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Intervention\Image\Constraint;
@@ -26,8 +27,10 @@ class NoticiasController extends Controller
     public function ver($id)
     {
         $noticia= Noticia::findOrFail($id);
+        $tickets = Ticket::all();
         return view('noticias.ver',[
-            'noticia'=>$noticia,
+                'noticia'=>$noticia,
+                'tickets' => $tickets,
         ]);
 
     }
@@ -127,14 +130,11 @@ class NoticiasController extends Controller
 
     protected function toRoute(string $route, array $messages = []): \Illuminate\Http\RedirectResponse
     {
-        // Con el método route() podemos indicar el nombre de la ruta a donde redireccionar.
+
         $redirect = redirect()->route($route);
 
-        // Agregamos los mensajes que nos puedan haber pedido.
         foreach($messages as $type => $message) {
-            // with() permite enviar una variable de sesión "flash" (que solo existe en el próximo
-            // renderizado) a la página que redireccionamos.
-            // La función e() es un helper para llamar a htmlspecialchars.
+
             $redirect->with('message.' . $type, $message);
         }
 
