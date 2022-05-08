@@ -83,6 +83,10 @@ class NoticiasController extends Controller
         $request->validate(Noticia::$rules, Noticia::$rulesMessages);
         $data = $request -> all();
 
+        if ($request->hasFile('poster') && $request->file('poster')->isValid()){
+          $data['poster']= date('YmdHis_') . "." . $request->file('poster')->extension();
+          $request->file('poster')->move(public_path('imgs/'),$data['poster']);
+        }
 
         try {
             DB::transaction(function () use($noticia,$data){
