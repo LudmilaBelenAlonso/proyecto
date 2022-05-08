@@ -37,7 +37,7 @@
             <select name="localidad_id" id="localidad_id" class="form-control">
                 <option value="">Elegí la localidad del evento</option>
                 @foreach($localidades as $localidad)
-                    <option value="{{old('localidad_id', $noticia->localidad_id)}}"
+                    <option value="{{$localidad->localidad_id}}"
                             @selected($localidad->localidad_id == old('localidad_id', $noticia->localidad_id))
                         >{{$localidad->nombre}}</option>
                 @endforeach
@@ -88,7 +88,7 @@
         ?>
         <div class="mb-3">
             <p>Poster actual</p>
-            <img src="{{ url('imgs/' . $noticia->poster) }}" alt="Poster de {{ $noticia->titulo }} {!! $attrs !!}">
+            <img src="{{ url('imgs/' . $noticia->poster) }}" alt="Poster de {{ $noticia->titulo }}" {!! $attrs !!}>
         </div>
         @endif
 

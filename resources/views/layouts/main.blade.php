@@ -37,9 +37,9 @@
                 @endguest
 
                 @auth()
-                <li class="nav-item">
+                {{--<li class="nav-item">
                     <a class="nav-link" href="<?=url('admin/dashboard');?>">Panel de administración</a>
-                </li>
+                </li>--}}
                 <li class="nav-item">
                     <form action="{{route('auth.logout')}}" method="post">
                         @csrf

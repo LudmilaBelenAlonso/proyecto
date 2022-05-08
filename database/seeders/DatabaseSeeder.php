@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
        $this->call(NoticiasSeeder::class);
        $this->call(NoticiasTienenGenerosSeeder::class);
        $this->call(UserSeeder::class);
+       $this->call(TicketsSeeder::class);
+       $this->call(NoticiasTienenTicketsSeeder::class);
     }
 }

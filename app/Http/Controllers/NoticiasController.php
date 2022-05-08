@@ -8,6 +8,8 @@ use App\Models\Localidad;
 use App\Models\Noticia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Intervention\Image\Constraint;
+use Intervention\Image\Facades\Image;
 
 
 class NoticiasController extends Controller
@@ -44,11 +46,7 @@ class NoticiasController extends Controller
     {
         $request->validate(Noticia::$rules, Noticia::$rulesMessages);
         $data = $request -> all();
-        if ($request->hasFile('poster') && $request->file('poster')->isValid()){
-            $data['poster']= date('YmdHis_') . "." . $request->file('poster')->extension();
-
-            $request->file('poster')->move(public_path('imgs/'), $data['poster']);
-        }
+        $data['poster'] = $this->uploadImage($request);
 
         try {
             DB::transaction(function () use($data){
@@ -82,10 +80,8 @@ class NoticiasController extends Controller
         $noticia = Noticia::findOrFail($id);
         $request->validate(Noticia::$rules, Noticia::$rulesMessages);
         $data = $request -> all();
-
-        if ($request->hasFile('poster') && $request->file('poster')->isValid()){
-          $data['poster']= date('YmdHis_') . "." . $request->file('poster')->extension();
-          $request->file('poster')->move(public_path('imgs/'),$data['poster']);
+        if($request->hasFile('poster')) {
+            $data['poster'] = $this->uploadImage($request);
         }
 
         try {
@@ -144,7 +140,24 @@ class NoticiasController extends Controller
 
         return $redirect;
     }
+    /**
+     *@param Request $request
+     * @param string $field
+     *@return string|null
+     */
+    protected function uploadImage($request, $field = 'poster'):string|null
+    {
+        if ($request->hasFile($field) && $request->file($field)->isValid()){
+            $filename = date('YmdHis_') . "." . $request->file($field)->extension();
 
-
+            Image::make($request->file($field))->resize(600,600, function (Constraint $constraint){
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })
+                ->save(public_path('imgs/'.$filename));
+            return $filename;
+        }
+        return null;
+    }
 
 }

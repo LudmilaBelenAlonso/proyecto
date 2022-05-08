@@ -22,7 +22,7 @@
                     <a class="nav-link" href="<?=url('/');?>">Volver a la Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?=url('admin/dashboard');?>">Dashboard</a>
+                    <a class="nav-link" href="<?=url('admin/dashboard');?>">Panel de Administración</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?=url('admin/noticias');?>">Noticias</a>

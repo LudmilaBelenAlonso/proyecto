@@ -73,4 +73,15 @@ class Noticia extends Model
             'noticia_id',
             'genero_id');
     }
+
+    public function tickets()
+    {
+        return $this->belongsToMany(
+            Genero::class,
+            'noticias_tienen_tickets',
+            'noticia_id',
+            'ticket_id',
+            'noticia_id',
+            'ticket_id');
+    }
 }

@@ -38,4 +38,4 @@ Route::post('noticias/{id}/editar', [\App\Http\Controllers\NoticiasController::c
 
 Route::post('noticias/{id}/eliminar', [\App\Http\Controllers\NoticiasController::class, 'eliminar']) ->name('noticias.eliminar')->middleware(['auth']);
 
-Route::get('admin/dashboard',[\App\Http\Controllers\AdminController::class, 'dashboard'])->middleware(['auth']);
+//Route::get('admin/dashboard',[\App\Http\Controllers\AdminController::class, 'dashboard'])->middleware(['auth']);
