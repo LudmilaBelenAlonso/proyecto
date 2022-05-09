@@ -20,81 +20,54 @@ class NoticiasTienenTicketsSeeder extends Seeder
                     'ticket_id' => 1,
                     'created_at' => now(),
                     'updated_at' => now(),
-                ],
-                [
+                ],[
                     'noticia_id' => 1,
                     'ticket_id' => 2,
                     'created_at' => now(),
                     'updated_at' => now(),
-                ],
-                [
+                ],[
                     'noticia_id' => 1,
-                    'ticket_id' => 3,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'noticia_id' => 2,
-                    'ticket_id' => 3,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'noticia_id' => 2,
-                    'ticket_id' => 4,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'noticia_id' => 5,
-                    'ticket_id' => 3,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'noticia_id' => 6,
-                    'ticket_id' => 4,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'noticia_id' => 7,
-                    'ticket_id' => 1,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'noticia_id' => 7,
-                    'ticket_id' => 4,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'noticia_id' => 8,
-                    'ticket_id' => 4,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'noticia_id' => 9,
                     'ticket_id' => 3,
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],[
-                    'noticia_id' => 10,
-                    'ticket_id' => 2,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-            [
-                    'noticia_id' => 10,
+                    'noticia_id' => 2,
                     'ticket_id' => 3,
                     'created_at' => now(),
                     'updated_at' => now(),
-                ],
-                [
-                    'noticia_id' => 10,
+                ],[
+                    'noticia_id' => 2,
                     'ticket_id' => 4,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ],[
+                    'noticia_id' => 5,
+                    'ticket_id' => 3,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ],[
+                    'noticia_id' => 6,
+                    'ticket_id' => 4,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ],[
+                    'noticia_id' => 7,
+                    'ticket_id' => 1,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ],[
+                    'noticia_id' => 7,
+                    'ticket_id' => 4,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ],[
+                    'noticia_id' => 8,
+                    'ticket_id' => 4,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ],[
+                    'noticia_id' => 9,
+                    'ticket_id' => 3,
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],

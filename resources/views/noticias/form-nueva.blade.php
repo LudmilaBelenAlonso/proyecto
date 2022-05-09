@@ -27,7 +27,7 @@
                 @error('titulo') aria-describedby="error-titulo" @enderror
                 value="{{ old('titulo') }}">
             @error('titulo')
-                <div class="text-danger" id="error-titulo">{{$message}}</div>
+                <div class="alert-danger" id="error-titulo">{{$message}}</div>
             @enderror
         </div>
         <div class="mb-3">

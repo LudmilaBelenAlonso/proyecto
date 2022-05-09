@@ -24,7 +24,7 @@
                     @forelse($noticia->generos as $genero)
                         <span class="badge bg-info">{{$genero->nombre}}</span>
                     @empty
-                        <p class="badge bg-secondary">No especificado</p>
+                        <p class="badge bg-info">No especificado</p>
                     @endforelse
                 </div>
                 <p class="card-text">{{$noticia->copete}}</p>
