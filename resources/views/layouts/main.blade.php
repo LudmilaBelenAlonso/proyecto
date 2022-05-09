@@ -32,7 +32,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?=route('auth.login.form');?>">Iniciar Sesión</a>
                 </li>
-                
+
                 @endguest
 
                 @auth()
