@@ -17,7 +17,7 @@
     @if($noticias->isNotEmpty())
 
         @foreach ($noticias as $noticia)
-        <div class="card mb-3">
+        <div class="card mb-3 contenedor">
             <div class="p-2">
                 <h2 class="card-title">{{$noticia->noticia_id}} - {{$noticia->titulo}}</h2>
                 <div>

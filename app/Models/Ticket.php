@@ -22,6 +22,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Tickets whereTicketId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tickets whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string $fecha
+ * @method static \Illuminate\Database\Eloquent\Builder|Ticket whereFecha($value)
  */
 class Ticket extends Model
 {

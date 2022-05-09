@@ -1,6 +1,7 @@
 html, body, #app{
     height: 100%;
-    background-color: #17a2b8;
+    background-color: #101214;
+    color: #fafafa;
 }
 #app{
     display: grid;
@@ -10,7 +11,7 @@ html, body, #app{
     display: flex;
     justify-content: center;
     height: 75px;
-    background-color: #45b5c6;
+    background-color: #1d2124;
     color: #fafafa;
 }
 
@@ -19,7 +20,7 @@ html, body, #app{
 }
 
 #nbg{
-    background-color: #45b5c6;
+    background-color: #1d2124;
 }
 
 a {
@@ -28,6 +29,6 @@ a {
 }
 
 .contenedor {
-    background-color: #fafafa;
+    background-color: #333333;
 }
 

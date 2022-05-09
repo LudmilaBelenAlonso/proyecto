@@ -7,7 +7,7 @@
 @section('title',$noticia ->titulo)
 
 @section('main')
-<div class="card">
+<div class="card contenedor">
 
     @if($noticia->poster != '' && file_exists(public_path('imgs/' . $noticia->poster)))
         <?php
@@ -39,7 +39,7 @@
                     <div class="row">
                 @foreach($noticia->tickets as $ticket)
 
-                            <div class="card mr-1 col-3">
+                            <div class="card mr-1 col-3 contenedor">
                                 <div class="card-body">
                                     <p class="card-text h5">{{$ticket->nombre}}</p>
                                     <p class="card-text"><em>$ </em>{{$ticket->precio}}</p>

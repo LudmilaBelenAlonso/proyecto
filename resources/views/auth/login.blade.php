@@ -18,7 +18,7 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" name="password" id="password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+            <button type="submit" class="btn btn-outline-primary w-100">Ingresar</button>
         </form>
     </section>
 @endsection
