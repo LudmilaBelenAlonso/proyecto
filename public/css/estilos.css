@@ -1,7 +1,7 @@
 html, body, #app{
     height: 100%;
     background-color: #101214;
-    color: #fafafa;
+    color: #A0AEC0;
 }
 #app{
     display: grid;
@@ -13,6 +13,9 @@ html, body, #app{
     height: 75px;
     background-color: #1d2124;
     color: #fafafa;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer p{
@@ -30,5 +33,9 @@ a {
 
 .contenedor {
     background-color: #333333;
+}
+
+.txt-bg{
+    color: #101214;
 }
 

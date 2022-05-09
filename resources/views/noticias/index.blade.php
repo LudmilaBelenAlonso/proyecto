@@ -20,7 +20,7 @@
         <div class="card mb-3 contenedor">
             <div class="p-2">
                 <h2 class="card-title">{{$noticia->noticia_id}} - {{$noticia->titulo}}</h2>
-                <div>
+                <div class="txt-bg">
                     @forelse($noticia->generos as $genero)
                         <span class="badge bg-info">{{$genero->nombre}}</span>
                     @empty

@@ -55,10 +55,15 @@ class Noticia extends Model
     public static $rules = [
         'titulo' => 'required',
         'fecha_evento' => 'required',
+        'copete' => 'required',
+        'desarrollo' => 'required',
     ];
     public static $rulesMessages = [
         'titulo.required' => 'La noticia tiene que tener un titulo.',
-        'fecha_evento.required' => 'Por favor ingresar el mes y año del evento'
+        'fecha_evento.required' => 'Por favor ingresar el mes y año del evento',
+        'copete.required' => 'La nota debe tener un resumen que servirá de copete de la nota.',
+        'desarrollo.required' => 'Debes escribir el contenido de la nota.',
+
     ];
 
     public function localidad(){

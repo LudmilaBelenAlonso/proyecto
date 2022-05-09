@@ -23,7 +23,7 @@
         <div class="p-2">
             <h2 class="card-title">{{$noticia ->titulo}}</h2>
                 <p class="card-text">@forelse($noticia->generos as $genero)
-                        <span class="badge bg-info">{{$genero->nombre}}</span>
+                        <span class="badge bg-info txt-bg">{{$genero->nombre}}</span>
                     @empty
                         Sin género definido.
                     @endforelse</p>
@@ -34,10 +34,10 @@
 
 
             <div class="mb-3">
-                <p class="card-text h4">Ticket Disponibles</p>
+                <p class="card-text h4">Ticket:</p>
                 <div class="container">
                     <div class="row">
-                @foreach($noticia->tickets as $ticket)
+                    @forelse($noticia->tickets as $ticket)
 
                             <div class="card mr-1 col-3 contenedor">
                                 <div class="card-body">
@@ -47,7 +47,9 @@
                                     <button class="btn btn-outline-info">Comprar</button>
                                 </div>
                             </div>
-                @endforeach
+                    @empty
+                        <p class="card-text">Tickets agotados</p>
+                    @endforelse
                     </div>
                 </div>
             </div>
