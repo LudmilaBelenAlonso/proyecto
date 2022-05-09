@@ -28,15 +28,15 @@
                         Sin género definido.
                     @endforelse</p>
                 <p class="card-text">{{$noticia->copete}}</p>
-                <p class="card-text h4">{{$noticia -> desarrollo}}</p>
+                <p class="card-text h5">{{$noticia -> desarrollo}}</p>
                 <p class="card-text"><strong>Mes y Año Evento:</strong> {{$noticia -> fecha_evento}}</p>
                 <p class="card-text"><strong>Localidad:</strong> {{$noticia -> localidad -> nombre}}</p>
 
 
             <div class="mb-3">
-                <h3 class="card-title">Tickets disponibles</h3>
+                <p class="card-text h4">Comprar Tickets Disponibles</p>
                 @foreach($noticia->tickets as $ticket)
-                    <button class="btn btn-outline-info">Comprar: {{$ticket->nombre}}</button>
+                    <button class="btn btn-outline-info">{{$ticket->nombre}}</button>
                 @endforeach
             </div>
         </div>
