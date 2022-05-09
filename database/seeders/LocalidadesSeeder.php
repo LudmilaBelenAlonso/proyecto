@@ -43,6 +43,20 @@ class LocalidadesSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'localidad_id' => 5,
+                'nombre' => 'Milano',
+                'pais' => 'Italia',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'localidad_id' => 6,
+                'nombre' => 'Lisboa',
+                'pais' => 'Portugal',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
     ]);
     }
 }

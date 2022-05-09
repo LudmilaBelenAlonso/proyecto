@@ -15,54 +15,38 @@
     @endauth
 
     @if($noticias->isNotEmpty())
-    <table class="table table-striped table-bordered">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Titulo</th>
-            <th>Genero</th>
-            <th>Resumen</th>
-            <th>Mes y año Evento</th>
-            <th>Lugar del Evento</th>
-            <th>País del Evento</th>
-            <th>Acciones</th>
-        </tr>
-        </thead>
-        <tbody>
+
         @foreach ($noticias as $noticia)
-        <tr>
-            <td>{{$noticia->noticia_id}}</td>
-            <td>{{$noticia->titulo}}</td>
-            <td>
-                @forelse($noticia->generos as $genero)
-                    <span class="badge bg-secondary">{{$genero->nombre}}</span>
-                @empty
-                    <p class="badge bg-secondary">No especificado</p>
-                @endforelse
-            </td>
-            <td>{{$noticia->copete}}</td>
-            <td>{{$noticia -> fecha_evento}}</td>
-            <td>{{$noticia -> localidad->nombre}}</td>
-            <td>{{$noticia -> localidad->pais}}</td>
-
-            <td>
-                <div class="d-flex">
-                    <a href="{{ route('noticias.ver', ['id' => $noticia->noticia_id]) }}" class="btn btn-primary mx-1">Ver</a>
-
-                    @auth()
-                    <a href="{{ route('noticias.editar.form', ['id' => $noticia->noticia_id]) }}" class="btn btn-secondary mx-1">Editar</a>
-
-                    <form action="{{route('noticias.eliminar',['id'=>$noticia->noticia_id])}}" method="post" class="mx-1">
-                        @csrf
-                        <button class="btn btn-danger" type="submit">Eliminar</button>
-                    </form>
-                    @endauth
+        <div class="card mb-3">
+            <div class="p-2">
+                <h2 class="card-title">{{$noticia->noticia_id}} - {{$noticia->titulo}}</h2>
+                <div>
+                    @forelse($noticia->generos as $genero)
+                        <span class="badge bg-secondary">{{$genero->nombre}}</span>
+                    @empty
+                        <p class="badge bg-secondary">No especificado</p>
+                    @endforelse
                 </div>
-            </td>
-        </tr>
+                <p class="card-text">{{$noticia->copete}}</p>
+                <p class="card-text">{{$noticia -> fecha_evento}}</p>
+                <p class="card-text">{{$noticia -> localidad->nombre}}</p>
+                <p class="card-text">{{$noticia -> localidad->pais}}</p>
+                    <div class="d-flex">
+                        <a href="{{ route('noticias.ver', ['id' => $noticia->noticia_id]) }}" class="btn btn-outline-primary mx-1">Ver</a>
+
+                        @auth()
+                        <a href="{{ route('noticias.editar.form', ['id' => $noticia->noticia_id]) }}" class="btn btn-outline-secondary mx-1">Editar</a>
+
+                        <form action="{{route('noticias.eliminar',['id'=>$noticia->noticia_id])}}" method="post" class="mx-1">
+                            @csrf
+                            <button class="btn btn-outline-danger" type="submit">Eliminar</button>
+                        </form>
+                        @endauth
+                    </div>
+            </div>
+        </div>
         @endforeach
-        </tbody>
-    </table>
+
     @else
         <p>No hay noticias que mostrar</p>
     @endif

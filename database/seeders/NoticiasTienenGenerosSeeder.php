@@ -63,6 +63,42 @@ class NoticiasTienenGenerosSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'noticia_id' => 6,
+                'genero_id' => 4,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],[
+                'noticia_id' => 7,
+                'genero_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],[
+                'noticia_id' => 7,
+                'genero_id' => 4,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],[
+                'noticia_id' => 8,
+                'genero_id' => 4,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],[
+                'noticia_id' => 9,
+                'genero_id' => 3,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],[
+                'noticia_id' => 10,
+                'genero_id' => 2,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],[
+                'noticia_id' => 10,
+                'genero_id' => 4,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }

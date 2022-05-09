@@ -7,8 +7,7 @@
 @section('title',$noticia ->titulo)
 
 @section('main')
-
-    <h1 class="mb-3">{{$noticia ->titulo}}</h1>
+<div class="card">
 
     @if($noticia->poster != '' && file_exists(public_path('imgs/' . $noticia->poster)))
         <?php
@@ -17,34 +16,32 @@
         <img
             src="{{ url('imgs/' . $noticia->poster) }}"
             alt="Poster de {{ $noticia->titulo }}" {!! $attrs !!}
+            class="mx-auto d-block pt-2"
         >
     @endif
-    <dl>
-        <dt>Géneros</dt>
-        <dd>@forelse($noticia->generos as $genero)
-                <span class="badge bg-secondary">{{$genero->nombre}}</span>
-            @empty
-                Sin género definido.
-            @endforelse</dd>
-        <dd>{{$noticia->copete}}</dd>
-        <dt>Desarrollo</dt>
-        <dd>{{$noticia -> desarrollo}}</dd>
-        <dt>Fecha Evento</dt>
-        <dd>{{$noticia -> fecha_evento}}</dd>
-        <dt>Localidad</dt>
-        <dd>{{$noticia -> localidad -> nombre}}</dd>
+    <div class="card-body">
+        <div class="p-2">
+            <h2 class="card-title">{{$noticia ->titulo}}</h2>
+                <p class="card-text">@forelse($noticia->generos as $genero)
+                        <span class="badge bg-secondary">{{$genero->nombre}}</span>
+                    @empty
+                        Sin género definido.
+                    @endforelse</p>
+                <p class="card-text">{{$noticia->copete}}</p>
+                <p class="card-text h4">{{$noticia -> desarrollo}}</p>
+                <p class="card-text"><strong>Mes y Año Evento:</strong> {{$noticia -> fecha_evento}}</p>
+                <p class="card-text"><strong>Localidad:</strong> {{$noticia -> localidad -> nombre}}</p>
 
-    </dl>
-    <div class="mb-3">
-        <legend>Tickets disponibles</legend>
-        @foreach($noticia->tickets as $ticket)
-            <span class="badge">{{$ticket->nombre}}</span>
-            <button>{{$ticket->nombre}}</button>
-        @endforeach
+
+            <div class="mb-3">
+                <h3 class="card-title">Tickets disponibles</h3>
+                @foreach($noticia->tickets as $ticket)
+                    <button class="btn btn-outline-info">Comprar: {{$ticket->nombre}}</button>
+                @endforeach
+            </div>
+        </div>
     </div>
-
-
-
+</div>
 
 
 @endsection
