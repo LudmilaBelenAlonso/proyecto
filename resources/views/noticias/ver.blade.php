@@ -34,10 +34,22 @@
 
 
             <div class="mb-3">
-                <p class="card-text h4">Comprar Tickets Disponibles</p>
+                <p class="card-text h4">Ticket Disponibles</p>
+                <div class="container">
+                    <div class="row">
                 @foreach($noticia->tickets as $ticket)
-                    <button class="btn btn-outline-info">{{$ticket->nombre}}</button>
+
+                            <div class="card mr-1 col-3">
+                                <div class="card-body">
+                                    <p class="card-text h5">{{$ticket->nombre}}</p>
+                                    <p class="card-text"><em>$ </em>{{$ticket->precio}}</p>
+                                    <p class="card-text"><em>Fecha: </em>{{$ticket->fecha}}</p>
+                                    <button class="btn btn-outline-info">Comprar</button>
+                                </div>
+                            </div>
                 @endforeach
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->smallIncrements('ticket_id');
             $table->string('nombre', 100);
+            $table->integer('precio');
+            $table->date('fecha');
             $table->timestamps();
         });
     }
