@@ -29,7 +29,7 @@ class NoticiasSeeder extends Seeder
             ],
             [
                 'noticia_id' =>2,
-                'localidad_id' =>3,
+                'localidad_id' =>1,
                 'titulo' => 'Bye bye',
                 'copete' => 'Babasónicos llega al Movistar Arena para brindar un show esperado y controversial.',
                 'desarrollo' => 'Lejos de decir adiós, la banda se presenta en este escenario interpretando su último single: Bye Bye. Es como una “fantasía bailable impregnada de sexualidad donde el placer de lo efímero se vuelve refugio temporal de un mundo apocalíptico paradójicamente perdido a merced de lo superficial”.',

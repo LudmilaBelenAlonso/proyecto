@@ -4,6 +4,7 @@ html, body, #app{
 }
 #app{
     display: grid;
+    grid-template-rows: 56px 1fr 75px;
 }
 .footer {
     display: flex;
@@ -24,5 +25,8 @@ html, body, #app{
 a {
     color: #fafafa;
     text-decoration-color: #fafafa;
+}
 
+.contenedor {
+    background-color: #fafafa;
 }

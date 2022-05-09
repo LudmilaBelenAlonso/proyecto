@@ -49,9 +49,9 @@
                 name="copete"
                 class="form-control @error('titulo') is-invalid @enderror"
                 @error('copete') aria-describedby="error-copete" @enderror>
-                {{ old('copete', $noticia->desarrollo) }}
+                {{ old('copete', $noticia->copete) }}
             </textarea>
-            @error('desarrollo')
+            @error('copete')
             <div class="text-danger" id="error-desarrollo">{{$message}}</div>
             @enderror
         </div>

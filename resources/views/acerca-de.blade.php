@@ -4,5 +4,7 @@
 @section('main')
 
     <h1>Acerca de Iris</h1>
-    <p>Practicando</p>
+    <div class="contenedor rounded">
+        
+    </div>
 @endsection
