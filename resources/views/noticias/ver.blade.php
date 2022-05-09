@@ -23,7 +23,7 @@
         <div class="p-2">
             <h2 class="card-title">{{$noticia ->titulo}}</h2>
                 <p class="card-text">@forelse($noticia->generos as $genero)
-                        <span class="badge bg-secondary">{{$genero->nombre}}</span>
+                        <span class="badge bg-info">{{$genero->nombre}}</span>
                     @empty
                         Sin género definido.
                     @endforelse</p>

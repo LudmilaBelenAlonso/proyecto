@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-li bg-light">
+<nav id="nbg" class="navbar navbar-expand-lg navbar-li navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">IrisNews</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-togle="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Abrir/cerrar menu de navegacion">

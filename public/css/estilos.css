@@ -1,5 +1,6 @@
 html, body, #app{
     height: 100%;
+    background-color: #17a2b8;
 }
 #app{
     display: grid;
@@ -8,10 +9,20 @@ html, body, #app{
     display: flex;
     justify-content: center;
     height: 75px;
-    background-color: #666666;
+    background-color: #45b5c6;
     color: #fafafa;
 }
 
 .footer p{
     margin-bottom: 0;
+}
+
+#nbg{
+    background-color: #45b5c6;
+}
+
+a {
+    color: #fafafa;
+    text-decoration-color: #fafafa;
+    
 }
