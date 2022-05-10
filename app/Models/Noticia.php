@@ -12,7 +12,9 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $noticia_id
  * @property string $titulo
+ * @property string $noticia
  * @property string $fecha_espectaculo
+ * @property string $filler
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Noticia newModelQuery()
@@ -48,27 +50,19 @@ class Noticia extends Model
     protected $table = "noticias";
     protected  $primaryKey = "noticia_id";
 
-
     protected $fillable = ['titulo','copete','desarrollo','fecha_evento', 'poster', 'localidad_id'];
 
-    /** @var string[]
-    *Mesajes de error
-    */
     public static $rules = [
-        'titulo' => 'required|min:3',
+        'titulo' => 'required',
         'fecha_evento' => 'required',
-        'copete' => 'required|min:50',
-        'desarrollo' => 'required|200',
+        'copete' => 'required',
+        'desarrollo' => 'required',
     ];
-
     public static $rulesMessages = [
-        'titulo.required' => 'La noticia tiene que tener un título.',
-        'titulo.min' => 'El título de la noticia tiene que tener al menos :min cáracteres.',
+        'titulo.required' => 'La noticia tiene que tener un titulo.',
         'fecha_evento.required' => 'Por favor ingresar el mes y año del evento',
-        'copete.required' => 'La nota debe tener un resumen que servirá de copete de la noticia.',
-        'copete.required' => 'El resumen de la noticia debe tener al menos :min cáracteres.',
-        'desarrollo.required' => 'Debes escribir el contenido de la nota.',
-        'desarrollo.required' => 'La noticia debe tener una extención de al menos :min cáracteres.',
+        'copete.required' => 'La nota debe tener un resumen que servirá de copete de la nota',
+        'desarrollo.required' => 'Debe escribir el contenido de la nota',
 
     ];
 

@@ -17,7 +17,7 @@ class NoticiasController extends Controller
 {
     public function index()
     {
-       $noticias = Noticia::with(['localidad','generos'])->get();
+       $noticias = Noticia::with(['localidad','generos'])->paginate(2);
         return view('noticias/index', [
             'noticias' => $noticias,
             ]

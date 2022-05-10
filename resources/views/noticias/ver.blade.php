@@ -57,5 +57,6 @@
     </div>
 </div>
 
+<a href="<?=url('noticias');?>">Volver a Noticias</a>
 
 @endsection

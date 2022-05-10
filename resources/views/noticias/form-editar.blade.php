@@ -47,6 +47,7 @@
             <textarea
                 id="copete"
                 name="copete"
+                rows="3"
                 class="form-control @error('titulo') is-invalid @enderror"
                 @error('copete') aria-describedby="error-copete" @enderror>
                 {{ old('copete', $noticia->copete) }}
@@ -60,6 +61,7 @@
             <textarea
                 id="desarrollo"
                 name="desarrollo"
+                rows="5"
                 class="form-control @error('titulo') is-invalid @enderror"
                 @error('desarrollo') aria-describedby="error-desarrollo" @enderror>
                 {{ old('desarrollo', $noticia->desarrollo) }}

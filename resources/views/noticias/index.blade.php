@@ -1,5 +1,5 @@
 <?php
-    /** @var \App\Models\Noticia[] | \Illuminate\Database\Eloquent\Collection $noticias */
+    /** @var \App\Models\Noticia[] | \Illuminate\Database\Eloquent\Collection|\Illuminate\Pagination\PaginationServiceProvider $noticias */
 ?>
 
 @extends('layouts.main')
@@ -20,11 +20,11 @@
         <div class="card mb-3 contenedor">
             <div class="p-2">
                 <h2 class="card-title">{{$noticia->noticia_id}} - {{$noticia->titulo}}</h2>
-                <div class="txt-bg">
+                <div>
                     @forelse($noticia->generos as $genero)
-                        <span class="badge bg-info">{{$genero->nombre}}</span>
+                        <span class="badge bg-info txt-bg">{{$genero->nombre}}</span>
                     @empty
-                        <p class="badge bg-info">No especificado</p>
+                        <p class="badge bg-info txt-bg">No especificado</p>
                     @endforelse
                 </div>
                 <p class="card-text">{{$noticia->copete}}</p>
@@ -46,6 +46,7 @@
             </div>
         </div>
         @endforeach
+    {{$noticias->links()}}
 
     @else
         <p>No hay noticias que mostrar</p>
