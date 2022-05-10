@@ -23,7 +23,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Tickets whereTicketId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tickets whereUpdatedAt($value)
  * @mixin \Eloquent
- * @property string $fecha
+ * @property \Illuminate\Support\Carbon $fecha
  * @method static \Illuminate\Database\Eloquent\Builder|Ticket whereFecha($value)
  */
 class Ticket extends Model
@@ -40,6 +40,9 @@ class Ticket extends Model
             }
         );
     }
+    protected $casts = [
+        'fecha' => 'date',
+    ];
 }
 
 

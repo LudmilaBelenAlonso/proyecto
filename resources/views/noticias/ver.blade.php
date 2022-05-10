@@ -43,7 +43,7 @@
                                 <div class="card-body">
                                     <p class="card-text h5">{{$ticket->nombre}}</p>
                                     <p class="card-text"><em>$ </em>{{$ticket->precio}}</p>
-                                    <p class="card-text"><em>Fecha: </em>{{$ticket->fecha}}</p>
+                                    <p class="card-text"><em>Fecha: </em>{{$ticket->fecha->format('d/m/Y')}}</p>
                                     <button class="btn btn-outline-info">Comprar</button>
                                 </div>
                             </div>
