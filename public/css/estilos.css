@@ -2,6 +2,7 @@ html, body, #app{
     height: 100%;
     background-color: #101214;
     color: #A0AEC0;
+
 }
 #app{
     display: grid;
@@ -13,7 +14,7 @@ html, body, #app{
     height: 75px;
     background-color: #1d2124;
     color: #fafafa;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
