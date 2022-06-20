@@ -7,7 +7,10 @@
 @section('title',$noticia ->titulo)
 
 @section('main')
-<div class="card contenedor">
+
+<h1>Detalle del evento</h1>
+
+    <div class="card contenedor">
 
     @if($noticia->poster != '' && file_exists(public_path('imgs/' . $noticia->poster)))
         <?php

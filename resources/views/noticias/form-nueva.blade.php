@@ -8,9 +8,9 @@
 @section('title','Agregar nueva noticia')
 @section('main')
 
-    <h1 class="mb-4">Agregar Nueva Noticia</h1>
+    <h1 class="mb-4">Agregar Nuevo Evento</h1>
 
-    <p>Completar el formulario para agregar la noticia que se desea publicar</p>
+    <p>Completar el formulario para agregar un evento que se desea publicar</p>
     @if($errors->any())
         <div class="alert alert-danger">Hay errores en los campos del formulario. Verificar y corregir los errores, luego volver a intentar guardar los cambios.</div>
     @endif

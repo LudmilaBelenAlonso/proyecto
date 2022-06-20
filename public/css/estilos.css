@@ -39,3 +39,6 @@ a {
     color: #101214;
 }
 
+ul {
+    list-style: none;
+}

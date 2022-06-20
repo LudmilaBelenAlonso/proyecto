@@ -11,7 +11,7 @@
 
     <h1 class="mb-4">Editar {{ $noticia ->titulo }}</h1>
 
-    <p>Editá los datos que necesites en esta noticia desde el form indicando los nuevo valores</p>
+    <p>Edita los datos que necesites en este evento desde el form indicando los nuevo valores</p>
 
     @if($errors->any())
         <div class="alert alert-danger">Hay errores en los campos del formulario. Verificar y corregir los errores, luego volver a intentar guardar los cambios.</div>
